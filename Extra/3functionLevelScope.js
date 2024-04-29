@@ -6,7 +6,7 @@
 function sum() {
   //
   //
-  console.log(a); //undefined because variable isnt defined yet but it isnt considered
+  console.log(a); //undefined because variable isn't defined yet but it isn't considered
   //
   //
   //

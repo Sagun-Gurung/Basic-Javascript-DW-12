@@ -1,5 +1,5 @@
 
-// default value which is a parameter in the function doesnot takes priority over the given 
+// default value which is a parameter in the function does not takes priority over the given 
 
 let sum = (a=10, b=12, c=22)=>{
     console.log(a)

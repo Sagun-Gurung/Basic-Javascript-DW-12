@@ -98,6 +98,27 @@ Array
         -False - doesn't add the value
     -By default the filter function returns False
 
+reduce() method - 
+syntax = array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+
+Example: 
+	const numbers = [1, 2, 3, 4, 5];
+
+const sum = numbers.reduce((total, currentValue) => {
+  return total + currentValue;
+}, 0);
+
+	console.log(sum); // Output: 15
+
+here total starts with an initial value 0
+
+1) slice() is used for creating a new array from a portion of an existing array
+	without modifying the original array.
+2) splice() is used for modifying the contents of an array by removing, replacing,
+	and/or adding elements in place within the original array.
+
+Choosing between slice() and splice() depends on whether you want to keep the original array
+	unchanged (slice()) or modify the array in place (splice()).
 
 ---------------------------------------------DAY 10-------------------------------------------
 
@@ -168,6 +189,31 @@ Asynchronous Function
 
 -Order doesn't matter in object 
 -Order of the values matter in the array
+
+typeOf(Array) == "object"
+Array as an Object:
+	Internally, arrays in JavaScript are implemented as objects with special characteristics.
+	Each element in the array is associated with a numeric index (0, 1, 2, ...)
+	which corresponds to a property key in the array object.
+typeof Behavior: The typeof operator in JavaScript returns a string indicating the type
+	of a variable or expression. When applied to an array, it evaluates the type of the
+	variable's reference, not the contents or structure of the array itself.
+
+The reason typeof array returns 'object' in JavaScript is rooted in the way arrays are
+implemented in the language.
+
+In JavaScript, arrays are a specialized type of object. They are considered objects with numeric
+keys that represent array indices. This means that while arrays have additional array-specific
+methods and behaviors, they are still fundamentally objects under the hood.
+
+When you use the typeof operator on a variable holding an array, the operator evaluates
+the variable's reference type rather than its actual content. Since arrays are objects in
+JavaScript, typeof array will always return 'object'.
+
+By using Array.isArray(), you can accurately check if a variable contains an array,
+whereas typeof is more general and does not differentiate between different types of objects
+like arrays and regular objects.
+
 
 
 ------------------------------------------------DAY 15 ----------------------------------
@@ -637,8 +683,19 @@ let, const, var
 		lexical scope
 		closure
 
-		Hoisting
+There are two phase of running programme
+	1) Hoisting
+	2) Code Execution
 
+	1) Hoisting -
+	Hoisting is a JavaScript behavior where variable and function declarations are moved
+	to the top of their containing scope during the compilation phase, before the code is executed.
+	This means that regardless of where variables and functions are declared within their scope,
+	they are effectively "hoisted" to the top of that scope.
+
+	Modern JavaScript best practices often recommend using let and const instead of var to declare variables,
+	as they have block scope (scoped to the nearest curly braces) rather than function scope.
+	This can help prevent unintended hoisting-related issues.
 
 	we can redefine variable that is declared with "var" but not "let"
 	var
@@ -655,7 +712,57 @@ Callback Function
 High Order Function
 	fun which takes argument as function fun1 is hof
 	
+Scope Chaining -
+Scope chaining refers to how variable lookup occurs in nested functions or blocks.
+When a variable is referenced within a function or block, JavaScript first looks for that variable
+within the current scope. If the variable is not found, it then looks in the outer (enclosing) scope,
+and this process continues until the variable is found or until the global scope is reached.
 
+Lexical Scope
+Lexical scope means that the scope of a variable is defined by its location within the code's structure.
+Variables declared inside a function are scoped to that function, meaning they are accessible only
+within that function (unless explicitly returned or captured in a closure).
+Variables declared outside any function (at the global scope) are accessible globally,
+throughout the entire script.
+
+Accessing Variables:
+In lexical scope, inner functions have access to variables declared in their outer functions (closure).
+However, outer functions do not have access to variables declared in their inner functions.
+
+Scope Chain:
+Lexical scoping creates a scope chain, where each inner function has access to its own scope as well
+as the scopes of its outer functions all the way up to the global scope.
+This allows for closures, where inner functions "remember" the variables from their outer scopes
+even after the outer functions have finished executing.
+
+Closure
+
+Difference between Closure and Lexical Scope
+
+Closure and lexical scope are related concepts in JavaScript but serve
+different purposes and operate at different levels of abstraction.
+
+Lexical Scope:
+Lexical scope refers to how variable names are resolved in nested functions based on
+	their physical placement within the code.
+Variables are scoped to the function where they are declared, as well as any outer functions
+	or the global scope if they are not found in the immediate scope.
+Lexical scope determines the accessibility and visibility of variables at compile time based
+	on the structure of the code.
+
+Closure
+A closure is a function that retains access to variables from its parent scope even after the parent
+	function has finished executing.
+Closures "close over" their surrounding lexical scope, capturing variables and allowing the function
+	to access them later.
+Closures are created when an inner function is returned from an outer function,
+	preserving the state of the outer function's variables.
+
+
+In summary, lexical scope determines variable visibility and accessibility based on code structure,
+while closures allow functions to retain access to variables from their parent scopes even after
+those scopes have exited. Lexical scope is a language feature, whereas closure is a mechanism that
+utilizes lexical scope to create persistent references to variables.
 
 
 

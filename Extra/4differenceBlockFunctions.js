@@ -3,7 +3,7 @@ function sum() {
   var a = 20;
   //
 
-  if (a) {
+  if (!a) {
     //
     var b = 20;
     let c = 212;
@@ -21,7 +21,7 @@ sum();
     from 1 to 17
 
 c scope 
-    6 to 14
+    6 to 13
     7 to 8 = tdz
     10-12 = accessible
 

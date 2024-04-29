@@ -1,7 +1,5 @@
+let ar1 = [1, 2, 3];
 
+let ar2 = ar1.unshift(10); //adds the value at the front of an array
 
-let ar1 =[1, 2, 3]
-
-ar2 = ar1.unshift(10)//adds the value add the front of an array
-
-console.log(ar2)
+console.log(ar2);

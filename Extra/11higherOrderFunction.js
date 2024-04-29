@@ -7,7 +7,7 @@ let fun3 = () => {
 };
 
 /* HOF 
-HIgher order function
+Higher order function
 fun which takes argument as function fun1 is hof
 fun which return another function fun3
 */

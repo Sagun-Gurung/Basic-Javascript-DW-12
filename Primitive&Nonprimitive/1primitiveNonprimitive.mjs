@@ -1,4 +1,3 @@
-
 /* In case of primitive 
     - a new memory space is created if let keyword is used
 

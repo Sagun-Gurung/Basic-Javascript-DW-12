@@ -1,11 +1,10 @@
-
 // here we have array of objects
 
 let products = [
-    {name: "earphone", price: 600},
-    {name: "phone", price: 2000},
-    {name: "charger", price: 300},
-]
+  { name: "earphone", price: 600 },
+  { name: "phone", price: 2000 },
+  { name: "charger", price: 300 },
+];
 
 // let cost = Object.values(products) => this wouldnt work
 
@@ -14,13 +13,13 @@ let products = [
 */
 
 let priceArray = products.map((value, i) => {
-    return value.price
-})
+  return value.price;
+});
 
 // console.log(priceArray)
 
-let sumPrice = priceArray.reduce((pre, cur)=> {
-    return pre + cur
-}, 0)
+let sumPrice = priceArray.reduce((pre, cur) => {
+  return pre + cur;
+}, 0);
 
-console.log(sumPrice)
+console.log(sumPrice);
