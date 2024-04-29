@@ -1,0 +1,1082 @@
+        
+----------------    DAY 1   ---------------------------------------------
+
+JS is a single-threaded synchronous language
+Commented code will not tun (Ctrl+/)
+Ctrl C in terminal
+node filename (to run another file)
+
+Data 
+    String (They are always wrapped by double quotes)
+    Number
+    Boolean
+
+Operator
+Arithmetic Operator (+,-,/,*.%)
++ Operator
+    1+1 = 2
+    "1"+"1" = 11
+    "1"+ 1=11 always string wins
+In JS, operation are performed between two values
+It's the only operator that works on string
+
+
+Variable
+
+
+---------------------------------DAY 2---------------------------------------------------------------
+
+Variable
+    -we must define variable before calling variable
+    - variable name must be descriptive(Symbols allowed _ and $)
+    -always use camelcase convention for naming variable
+
+JS is a dynamic language because a variable can store different data at different time unlike C i.e
+once a container is made, it can store integer, string, boolean etc
+
+String 
+- It can be defined by using single quotes or double quotes
+-We cannot use single quotes inside single quotes and same for double quotes
+
+
+----------------------------DAY 4---------------------------------------
+
+1)Import/Export By name
+    - we can import/export multiple values on a single file
+    -the name of the variables should match with the name mentioned in export file
+    -we use curly braces while importing
+    
+2)Import/Export By Default
+    - we can import/export only one values on a single file
+    -we can use any variable while importing the default values
+    - we do not use curly braces
+
+3) Import/Export in Alias
+    - we use "as"
+
+
+---------------------------------DAY 5-----------------------------------
+Function
+    Every curly braces is like a new file   
+    we can define variable, call variable and so
+    but we cannot export variable defined inside curly braces
+
+
+=-----------------------------------DAY6-------------------
+Function continued...
+ -number of arguments and parameters to not have to be equal in JS //see 2passValue.mjs
+ 1) Function with Return - saved into variable
+ 2) Function without Return
+
+
+--------------------------------DAY 7--------------------------------------------
+
+String
+Array
+
+---------------------------------------DAY 8 -------------------------------------
+-Array Sort
+        ascending Sort - [9,10] => [10,9] because the first digit i.e. 1 is smaller than 9
+          ["c", "a"] => ["a", "c"] 
+        -["ac", "aa", "ab"] => ["aa", "ab", "ac"]
+        -["d", "c" "E", "C", 4] => [4,"C", "E", "c", "d"] - first capital then smaller letters
+        -It gives priority to number then Capital letter => Small Letter => symbols may go anywhere in between or latter
+
+        descending sort - There is no descending sort in JS hence we use reverse()
+    -forEach(value, index) function
+
+
+----------------------------------------------DAY 9--------------------------------------
+
+-Array  
+    -Map function - it is similar to forEach but it always returns Array
+        -use map(value, index), if input and output are Array
+        -input and output length are same
+
+    -Filter function filter(value, index) - It returns true or false and output is saved into array
+        - True - adds the value into variable
+        -False - doesn't add the value
+    -By default the filter function returns False
+
+
+---------------------------------------------DAY 10-------------------------------------------
+
+-Some Function
+    -it is also similar to filter(value, index) as it returns true or false and its by default false 
+    -However, it also gives array value on the condition is true/false
+    -output will be saved in the array if one of the input return is true
+
+-Every Function
+    -true if every input is true
+    
+-At Method at(index)
+    -it is easier to get last value on the array
+    -other uses yet to learn
+
+
+---------------------------------DAY 11------------------------------------------------
+
+Object
+    - It is used to store multiple data as similar to array but
+        it has key as well, e.g - name ="Sajf"
+    - It has information of data/ what kind of data it is 
+    -Property = key + value
+    -Not every Array can be converted into Object, it needs to have key and value
+        e.g : [["name", "Mkaf"], ["age", 22222222], ["isMarried", true]]
+    -
+
+Array => Reduce Function
+    -reduce(function, initial value) for sum => initial value  =0, for product, initial value =1
+    -it is usually used to calculate the value inside the array
+    -it can return any value
+
+
+---------------------------------DAY 12----------------------------------------------------
+Datatypes in JS
+    i) Primitive i.e. String, Number, Boolean, Undefined
+    ii) Non-Primitive i.e. Array, Object
+
+
+---------------------------------------DAY 13-------------------------------------
+Asynchronous Function
+    -Anything that push its task to background(node) are called asynchronous function
+    -During code execution, the background code will execute when all synchronous JS code gets executed
+    -Call stack - call stack run the code inside it once the code gets executed, the code is popped off 
+    - The async function setTimeout() executes later despite its 0 sec timeout 
+    -Event Loop is a mediator which continuously monitor call stack and memory queue
+    -If the call stack is empty, it push the function from memory queue to call stack 
+    -Async function always ahs second priority over JS function
+    -The only purpose of Memory Queue in Node is to store the asynchronous function
+    -The Memory queue works on FIFO method, so as to avoid clash between multiple asynchronous function
+
+   ********** Does setTimeOut() guarantee the exact time?
+// it depends upon the other JS code/function we are running along with async function
+// - Nope but it indicates the minimum execution time of that asynchronous function
+// -setTimeOut() guarantee the min execution time but doesn't guarantee the exact time
+
+-------------------------------------------------DAY 14--------------------------------------
+
+1)Spread Operator
+    -spread operator are wrapper opener
+    -spread operator are used to make new array from existing arrays
+2)Rest Operator
+    -rest operator are used at receiver section
+    -it takes rest of th value and save it into array or object accordingly
+
+-in Object, duplicate key doesn't exist
+-if exist, below code overwrite above code
+
+-Order doesn't matter in object 
+-Order of the values matter in the array
+
+
+------------------------------------------------DAY 15 ----------------------------------
+Array of Object
+    -Map function is used to modify input element whereas filter() is used to filter input elements
+    -see QUESTIONS folder
+    
+
+
+--------------------------------------------------DAY 16 -----------------------------------
+-We studied GITLAB
+- This is practice for GItLab
+
+--------------------------------------------DAY 17 -------------------------------------------------
+
+    Git Conflict
+	
+-------------------------------------------------DAY 18--------------------------------------------
+	Node Js
+	CRUD operation
+		Create - post
+		Read - get
+		Update - patch
+		Delete - delete
+
+	request we need - url(localhost:8000) and method (post/get/patch/put/delete)
+
+	/ = refers to localhost:8000
+
+
+------------------------------------------DAY 20 -------------------------------------------------
+Middleware
+
+ALways use dynamic route
+
+localhost:8000a/b?name=sagun&age=29&address=ktm
+url = route+query
+
+route = localhost:8000a/b
+route = baseUrl + route params
+
+baseUrl = localhost:8000
+query = name=sagun&age=29&address=ktm
+
+
+We can send data from postman by three ways: 
+	-body
+	-query - to get query- req.query
+	-params - to get params - req.params
+whatever is sent in url will come in string
+for one request there must have one response
+
+
+----------------------------------------------Day 22--------------------------------------------------
+
+Middleware
+	They are the function which has req, res, next
+	next is used to trigger another middleware
+	we have two form of middleware:-
+		I)normal middleware (req, res, next) =>{}
+		II)error middleware (err, req, res, next) =>{}
+			to trigger error middleware we have to call next(value)
+
+	Middleware is divided into two parts-
+		i)route middleware
+		ii)application middleware
+
+---------------------------------------------------Day 23-------------------------------------------------
+
+Name the database
+data base store data as an array of object
+define the structure
+
+Schema - defining object
+Model - defining array
+
+Creating Model/Model Convention-
+	-first letter of model name must be capital and singular
+	-Variable name and model name must be same - because databse automatically saves the name in plural. eg: product => products
+
+
+Route Convention-
+	-at index it is good to use plural routes
+
+
+
+---------------------------------------------------------------DAY 24----------------------------------------------------------
+
+Add data to MongoDb
+
+- to get data from database - modelname.create()
+- to receive data from database - await modelname.find({})
+-use trycatch for any function that throws error- especially on sync function
+
+----------------------------------------------------------------------DAY 26------------------------------------------
+
+Alt_Shift+O - to delete unused import
+
+Create Promise
+
+-------------------------------------------------------------------DAY 27--------------------------------------------
+
+Product
+Process - 
+	1) schema
+	2) model
+	3) service
+	4) controller
+	5) route
+	6) index
+
+-------------------------------------------------------------DAY 28----------------------------------------------------------
+Refactoring
+----------------------------------------------------------Day 29 --------------------------------------------------
+
+Refactoring again
+Change in Review Schema
+(Referance) ref-
+to open the id is called Populate
+.populate("variable name in schema") -> it finds the data of specific model through id
+
+
+
+-----------------------------------------------------Day 30 ------------------------------------------------------------
+
+Status Code
+	i)Success 2XX
+
+	C - 201
+	R - 200
+	U - 201
+	D - 200
+
+	ii)Failure 4XX
+	
+Schema- Timestamps
+Date and Timestamps are always arranged in ISO format
+to convert into local time - we use ToLocalTime
+
+Validation 
+
+	Schema Validation
+	Joy Validation
+	
+------------------------------------------------------------------------DAY 31--------------------------------------------------------
+
+two types of way to call a middleware on a post/get functions
+	=> one we call with a bracket ()
+	=> another without ()
+
+----------------------------------------------------------------------DAY 32 ------------------------------------------------------
+Manipulation through Schema
+
+
+--------------------------------------------------------------------Day 33 ----------------------------------------------------------------
+
+1) Searching
+2) Sorting
+3) Pagination
+
+Tailwind css 
+Figma - prototype of the software before building
+
+1) ##Searching(Filtering)##
+	1)Exact Searching == query.js
+	2)Not-Exact Searching/ Regex Searching
+
+	Regex Searching => .find({name: /nitan/})
+				.find({name: /nitan/i}) //case insensitive
+				.find({name: /^nitan/})//that starts with ni
+				.find({name: /ni/}) //display any results that include "ni" even if it is the middle of words
+				.find({name: /ni$/}) //that ends with "ni"
+
+			inclusion and Exclusion except (-_id)
+		(-) Exclusive 
+		(+) Inclusive
+		eg: .find({}).select("-password") => dont show password
+			// .select("name password phoneNumber -_id")
+
+
+-------------------------------------------------------------------------- DAY 34 -------------------------------------------------------------------
+
+
+2) ##Sorting##
+	irrespective of javascript sort, mongoose sort works on number sort.
+	.find({}).sort("name") => ascending sort
+	.find({}).sort("-name") => descending sort
+	.find({}).sort("name age") => those who have same name, sort them with age	
+
+3) ##Pagination ####
+
+	
+------------------------------------------------------------------------------ DAY 35 --------------------------------------------------
+
+Sort//Rest Operator
+ make a habit of giving default value to functions--
+
+Pagination
+limit().skip()
+
+
+--------------------------------------------------------------------------- DAY 36 ------------------------------------------------------------------
+
+Pagination in Teacher
+	In mongodb we call: 
+		array = collection (defining collection/array is called Model)
+		object = document (defining document/object is called Schema)
+
+	###Hashing - bcrypt
+		Hash code fo sam string is different each time
+		=Encryption is possible
+		=Decryption is not possible
+	
+ALl CRUD Operation is Promise
+
+
+
+_________________________________________________________ DAY 37 --------------------------------------------------------------------------
+
+Token
+
+//generate token (id card)
+// verify token (id card verify)
+
+
+to generate token  => we require infoObj, logo, expiryInfo => In Js we say => infoObj, secretKey, expiryInfo
+
+npm i json-web-token -limited package (jwt)
+
+npm i jsonwebtoken (so use  this)
+
+
+-------------------------------------------------------------- DAY 38 ---------------------------------------------------------
+
+Utils- folder has resusable function
+
+sendMail.js
+npm i nodemailer
+
+controller
+
+Email Verifications
+
+-------------------------------------------------------------- DAY 39 -----------------------------------------------------------
+index.js
+inserting image through link -> we need to put image in a static folder
+
+expressApp.use(express.statis('./public'))
+
+	
+	npm i multer
+	
+		uploadFile.js
+
+
+
+		file	link
+	postman => server => postman
+
+
+-------------------------------------------------------------- DAY 40 ---------------------------------------------------------------------
+
+.env (this file should be made on the root directory)
+	it is a file where we define variable
+	we use uppercase convention 
+	every data in .env variable are strings so no need to use double quotes
+
+	to install => npm i dotenv
+
+	to use .envvariable we nmust use dotenv package
+	if you want .env variable in file first you msu have to config  dotenv in that file
+	to get .env variable use process.env.VARIABLE_NAME
+
+	
+in .env we store variable like
+	port 
+		backend port, mongodb port
+	url
+		server url
+		client url
+	credential
+		email password
+		seecret key
+	email info
+		email
+		app password
+
+frontend/client/browser = same thing
+
+
+
+
+		npm i      (when you have to install all the necessary package in depedencies at once in node_modules
+		and we dont send data of .env and node_modules on git hub
+
+	we put both file son .gitignore
+
+---------------------------------------------------------------------------- DAY 41 (REACT)----------------------------------------------------------------
+
+										REACT
+
+	npx create-react-app my-app
+	cd my-app
+
+	React variable can store tag
+	react function can return tag
+	anything that is return are printed on browser (dom)
+	
+
+
+-------------------------------------------------------------------- 42 ------------------------------------------------------------------------
+
+use {} to call variable inside tag
+write all code inside one wrapper
+
+    Page 
+        > there should only be one h1 tag on a webpage
+
+    Image
+        > always put image on public folder which is already static
+
+
+fullName = camel case (js, css on inline js)
+FullName => pascal cade (python)
+full-name => Kebab Case => (used in css, url, package name)
+FULL_NAME => Uppercase (.env)
+full_name => snake case
+
+	css 
+    		inline css
+    		external css
+        		it has three processes
+            			define css
+            			always import in index.js
+            			use it
+
+
+---------------------------------------------------------------- 43 ----------------------------------------------------
+
+Component (Custom tag)
+    its a function whose first letter is capital
+    value that we pass in components is called props
+    
+
+Making Custom tag (aka Component - is a function)
+    to make a custom tag, the first letter of function name must be capital
+    shortcut key => rafce
+    for components put .jsx
+
+
+props aka properties
+    passing value in component
+
+
+//boolean are not displayed on browser
+
+
+
+
+
+----------------------------------------------------------------- 44 ------------------------------------------------------------
+
+//boolean are not displayed on browser
+
+//get props using destructuring
+//inbuild html props such as style, src, className does not support in custom tag
+
+we cannot use if else forloop and other loop inside a tag
+
+Hook- useState() //anything that has use in the beginning
+
+LearnUseState.jsx
+let [] = useState()
+
+
+
+------------------------------------------------------------------- 45 -----------------------------------------------------
+
+JsPractise1.jsx
+
+	we cant define variables inside curly braces
+every array should have unique key
+
+	react fragments <>  </>
+    use it for wrapper because it does not support props
+
+    otherwise use <div>
+
+check [...new Set()]
+
+
+--------------------------------------------------------------------- 46 -------------------------------------------------------------------------
+
+LearnUseState2.jsx
+
+	
+---------------------------------------------------------------------- 47 -----------------------------------
+
+Prop Drilling = passing props from grandparents to parent and to child and so on.	
+
+
+Prop Drilling = passing props from grandparents to parent and to child and so on.
+    (it is the problem we can solve)
+    it is hectic to send data from granparents to its grandchild hence it is solved by using redux or useContext
+    
+    redux is a memory where props are stored so that it is accessible easily to child and grandchild
+
+
+Redux/ but in Js we have 
+- prop drilling 
+
+
+Interview Questions 
+useState, props, prop drilling, how can we solve prop-drilling
+
+useState is used t define variable
+props is used to pass varibale 
+prop-drilling ACom => BComponent => Ccomponent
+to solve prop-drilling, we use Redux or useContext
+
+
+	Infinite Rendering.jsx
+		// to prevent infinite rendering 
+    		// always place setCount on event (button click, ....) or inside useEffect
+
+
+***** Hook *****
+
+	Hook => they are the function =>whose letter starts with use
+	-We have 3 important hooks
+		1) useState()
+        2) useEffect()
+        3) useRef()
+    Other hooks are: 
+        useReducer()
+        useContext()
+        useCallback()
+        useMemo() 
+
+
+***** Form Handling ****
+
+------------------------------------------------------ 48-------------------------------
+/* Events in form:
+    onSubmit
+    onChange
+    onFocus
+    onBlur
+    */
+
+	
+
+
+
+
+
+************************************************* Extra ***************************************************************
+let, const, var
+
+	block level scope
+		temporal dead zone
+
+
+	function level scope
+
+
+		lexical scope
+		closure
+
+		Hoisting
+
+
+	we can redefine variable that is declared with "var" but not "let"
+	var
+	functional level scope
+	if variable is not define using (var, let or const) by default it will be var
+	we can redefine var variable
+
+	let, const
+	block level scope
+
+
+
+Callback Function
+High Order Function
+	fun which takes argument as function fun1 is hof
+	
+
+
+
+
+################################# React Router From Youtube #########################################################
+Basic Routing
+
+npm i react-router-dom
+<BrowserRouter></BrowserRouter //or routing process
+<NavLink></NavLink> => so that the website do not refresh whenever link is directed
+
+//to get dynamic route parameter
+	http://localhost:3000/b/asds/id/asfsa
+		const params = useParams()  => see GetDynamicRouteParameter.jsx
+		
+
+
+//to get query parameter
+	http://localhost:3000/about?name=momo&price=200
+		const [queries] = useSearchParams()  => see about.mjs
+		
+
+useNavigate() => to change path onClick event
+		=> see about.mjs
+
+
+
+
+
+
+---------------------------------------------FROM YOUTUBE ---------------------------------------------------------------------------------------
+
+	########### Joi Validation aka Server/Backend Validation ############################
+
+		npm i joi => to install the package
+
+	1) Joi.string()=>.min(), .max(),.required(),
+		string should not be empty "", if we want to allow, we can do Joi.string().allow("")
+	
+	2) Joi.number()=>.min(), .max(),.required(),
+		in case of number(), it also takes numbers wrapped with "".
+	3)Joi.Boolean()
+	
+	for Gender and such=
+		Joi.string().required().valid("male", "female", "other")
+
+	4) enum = fixed value (male, female, other)
+		=>Joi.valid("male", "female", "other")
+
+	5) Through Custom Error
+		=> Joi.custom(arrow function)
+
+		Demo
+		.custom((value, msg) => {
+			//validation pass
+			return true
+			else{
+				return msg.message("............")
+			}
+		})
+
+	Example for Age Validation
+		let validation = Joi.object()
+		.keys({
+			name: Joi.string().required().min(3), //it should have min of 3 letters
+    			price: Joi.number().required()
+				.custom((value, msg) => {
+					if (value >= 5000 ) return true; else return msg.message("Price is less than 5000!!")
+				}),
+    			quantity: Joi.number(),
+		}).unknown(true)
+
+	Example for Email Validation //search => "regex for email" in chatgpt for particular email format you need
+
+		email. Joi.string().required().custom(() => {
+
+			let validEmail = value.match(/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b/) //copied from chatgpt
+
+			if(validEmail) return true; else return msg.message("Invalid Email!")
+
+		})
+
+		***	value.match(/\b \b/)   *****
+
+	Password pattern = do same for passport. Search for the patterm in chatgpt
+
+	##Object Validation #########################################################
+		
+	=> Joi.object().keys({}).unknown(false)
+
+		Example
+		
+			location: Joi.object().keys({
+				country: Joi.string().required(),
+				city: Joi.string().required().custom((value, msg)=>{................})
+			}).unknown(false)
+
+	## Array Validation ###############################################################
+	
+	=> Joi.array().items()
+
+	Example
+		books: Joi.array().items(Joi.string().required())
+
+	## Array of Object ################################################3
+
+	=> Joi.array().items(Joi.objects().keys({})).unknown(false)
+		
+	Example
+	let's say "fav-subject" : [
+		{"bookAuthor": "Forgot", "bookname":"Dreamseller"},
+		{"bookAuthor": "Van Gogh", "bookname":"Dreamseller"}
+	]
+	Now,
+	
+	fav-subject: Joi.array()
+			.items(object().keys({
+				bookAuthor: Joi.string().required(),
+				bookName: Joi.string().required(),
+			}))
+			.unknown(false)
+
+	################################################################
+
+	Joi.when()
+
+	Example - If married true => Spousename: required() else Spousename: not required
+
+	isMarried: Joi.boolean().required()
+	
+	spouseName: Joi.when("isMarried", {is:true, then:Joi.string().required(), otherwise:Joi.string()})
+
+	##################################################		
+	
+	We can also send our own error message
+	
+	eg: isMarried: Joi.boolean().required().messages({"any.required":"isMarried is required"})
+
+
+
+
+[Note: Search in internet for Joi custome error messages
+
+	example: .messages({
+			"boolean.base": "isMarried must be valid boolean",
+			"number.base": "field must be number",
+			"number.min":"-----",
+			"string.base": "----",
+			"any.required":"Name is required",
+			"any.only": "Gender must be either male, female or other",
+		})
+
+
+
+
+
+
+
+
+********************************INTERVIEW QUESTIONS****************************************
+Define JS   
+    JS is a single-threaded, synchronous and dynamic language
+1+2+"3"+4+5 = 3345
+Error - "Address is not defined" - which means address variable is not defined
+Truthy and Falsey
+/* 
+all empty are falsy value
+String 
+    "" => Falsey
+    all are thruthy including space " "
+
+Number
+    0=> falsey
+    all are truthy
+*/ Examples at 9Conversion.mjs
+
+Difference between Null and Undefined
+    -Any variable is null when it's value is null
+    -Any variable is called undefined, if the variable has been declared but no value or operation has been done yet
+        -or if the variable is untouched
+-Slice
+Does setTimeOut() guarantee the exact time?
+- it depends upon the other JS code/function we are running along with async function
+- Nope but it indicates the minimum execution time of that asynchronous function
+- setTimeOut() guarantee the min execution time but doesn't guarantee the exact time
+
+Asynchronous Funtion
+    -Anything that push its task to background(node) are called asynchronous function
+    -During code execution, the background code will execute when all synchronous JS code gets executed
+    -Call stack - call stack run the code inside it once the code gets executed, the code is popped off 
+    - The async function setTimeout() executes later despite its 0 sec timeout 
+    -Event Loop is a mediator which continuously monitor call stack and memory queue
+    -If the call stack is empty, it push the function from memory queue to call stack 
+    -Async function always ahs second priority over JS function
+    -The only purpose of Memory Queue in Node is to store the asynchronous function
+    -The Memory queue works on FIFO method, so as to avoid clash between multiple asynchronous function
+
+// Arrow function does not support this keyword - see example 7this from Object folder
+-JS does not support import and export
+
+Interview Questions 
+useState, props, prop drilling, how can we solve prop-drilling
+
+useState is used t define variable
+props is used to pass varibale 
+prop-drilling ACom => BComponent => Ccomponent
+to solve prop-drilling, we use Redux or useContext
+
+
+
+---------------------------------------------------------- GITLAB -------------------------------------------------------------------
+
+add your folder(repo) to gitlab
+		in gitlab
+		click to create a project
+			give your porject name
+			click to public
+			**click to creat project in your folder
+		
+
+			git init
+			make connection by copy paste=>
+		 git remote add origin https://gitlab.com/nitanthapa425/dw-11-express.git
+
+		git add .
+		git commit -m "message"
+
+		git push origin Branch name
+			for mac and linux you have to add username and password
+			for this go to gitlab
+				click to profile Nitan thapa
+				user name is @.......  but copy withou @
+				for password click to edit profile
+				click to password and  add password like abc-1abc
+				note you can not push using main
+		click to long link 
+		click create merge
+		click merge
+		
+	**change something add to repo
+	git add .
+	git commit -m "..."
+	git push origin master
+
+
+	pull  
+	from first time
+	git clone link	
+	from second time
+	git pull origin main
+
+
+	Branch
+		what happen when branch is made
+		when to make branch
+		what is branch
+		how to make branch
+			git checkout -b branchName
+		how to see branch
+			git branch
+		how to switch branch
+			git checkout branchName
+
+	do git add and commit befor
+		pull,push, before making branch, switching branch,
+
+
+	push 
+	you must give permission to the user
+
+
+	resolving conflict
+		when you merge two branch you can get confilct  (but try to show from two different user)
+		accept current chage =>   means add your current branch code
+		accept incomming change => means add other branch code
+		accept both means add both branches code 
+	avoid confilict
+		always take a pull from main befor working
+	how to see the remote (connected repo) 
+		git remote -v
+	how to disconnect remote
+
+		git remote remove origin
+		or 
+			remove .git file  (.git file is hidden file)
+				for mac (type in terminal)
+					defaults write com.apple.finder AppleShowAllFiles YES
+					killall Finder
+
+	
+		
+	.gitignore
+
+
+
+
+
+
+
+
+
+****************************************************** P.T.R ***************************************************************************
+
+Array Sort
+ascending Sort - [9,10] => [10,9] because the first digit i.e. 1 is smaller than 9
+          ["c", "a"] => ["a", "c"] 
+        -["ac", "aa", "ab"] => ["aa", "ab", "ac"]
+        -["d", "c" "E", "C", 4] => [4,"C", "E", "c", "d"] - first capital then smaller letters
+        -It gives priority to number then Capital letter => Small Letter => symbols may go anywhere in between or latter
+
+        descending sort - There is no descending sort in JS hence we use reverse()
+
+find() => gives array of object
+findOne({e.g: name: req.body.name}) => gives one object
+
+
+
+
+
+/############################ Login Management Register ####################
+
+1>Register
+2>Login
+3>My Profile
+4>Update Profile
+5>Update Password
+6>Delete User/Account
+7>Read ALl User
+8>Read Specific User
+
+1> Register
+	=fullName
+	=Email
+	=password
+	=dob
+	=gender
+	=role = superadmin/admin/customer
+	=isVerifiedEmail
+		Verify Email - bydefault is false
+
+	1) Register
+
+		Start -> Hash Password ->save data with isVerifiedEmail False -> send email with links to verify
+
+		Verify Email -> postman token -> get token -> verify token -> get _id from token -> makeVerifiedEmail: true
+
+2> Login
+	Email and Password
+		check if the email exist or not -> if not found throw error
+		check if email is verified or not -> if not throw error
+		check password match or not -> if not throw error
+		generate token -> dont forget to attach _id
+		send token to frontend/postman
+
+3> My Profile
+	pass token from postman/frontend
+	get token from ''''
+	Verify token -> if not valid throw error
+		if valid, get _id from token
+		find details using that id in token
+	pass _id to another middleware next() (webUserRouter.js)
+
+4>Update Profile
+	pass token from postman/frontend
+	pass that token throw isAuthenticated
+	get _id/get data from body
+	update profile = send response
+
+
+5> Update Password
+	pass token from frontend/postman
+	isAuthenticated give >_id
+	get body from postman i.e old password, new password
+	
+	check either old password match with database password, if not throw error
+		if match - hash new password and save in database
+	send response
+
+6> Read ALl User
+7> Read Specific User
+8> Delete User
+9> Update Specific User
+
+10> Forget and Reset Password
+	send email from postman
+	check the email on database - > if not throw error
+	if email exist => send link in the email with token
+	
+	Reset Password
+		pass token from postman
+		pass password from postman
+		pass through isAuthenticated?
+		get _id
+		hash password
+		update that _id
+		send response
+
+
+11> AUthorization
+
+	isAUthenticated => middleware
+	postman pass token
+	isAuthemticated
+	_id
+	read details of that _id
+	get role of that detail
+	
+
+
+	MONGODB ATLAS
+	it's a website = create cluster (big database) => we can create different sub-data inside a cluster => it is user to save data to cloud => link => 
+
+	create and sign in on mongodb atlas
+	create cluster
+	get the link of the cluster => paste that link to our application
+
+
+
+
+
+
+
+
+
+
